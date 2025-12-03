@@ -1,4 +1,4 @@
-name: Keep backend site awake (ping every 15m)
+name: Ping Product service (every 10 mins)
 
 on:
   schedule:
@@ -15,7 +15,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          URL="https://qkart-backend-36n2.onrender.com"
+          URL="https://qkart-deepak-backend.onrender.com/api/v1/products"
 
           MAX_RETRIES=3
           RETRY_DELAY=5  # seconds between retries
