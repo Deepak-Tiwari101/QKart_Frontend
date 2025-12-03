@@ -25,7 +25,7 @@ jobs:
             ATTEMPT=$((ATTEMPT+1))
             echo "Attempt $ATTEMPT: GET $URL"
             # curl returns non-zero on HTTP >=400 or network failures with --fail
-            if curl --fail --silent --show-error --max-time 15 "$URL" -o /dev/null; then
+            if curl --fail --silent --show-error --max-time 120 "$URL" -o /dev/null; then
               echo "Success on attempt $ATTEMPT"
               exit 0
             else
