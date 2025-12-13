@@ -1,9 +1,8 @@
-name: Ping Product service (every 10 mins)
+name: Ping Product service (to avoid inactivity delay from render backend)
 
 on:
   schedule:
-    # runs every 10 minutes (GitHub Actions uses UTC)
-    - cron: "*/10 * * * *"
+    - cron: "*/5 * * * *"
   # optional manual trigger
   workflow_dispatch:
 
